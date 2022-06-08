@@ -31,12 +31,11 @@
   justify-content: space-between;
   margin: 5vh 5vw;
   width: 90%;
-  height: 90vh;
+  min-height: 90vh;
 }
 
 .content-container{
   width: 50%;
-  height: 100%;
   max-width: 500px;
 }
 
@@ -49,17 +48,18 @@
 }
 
 #apresentation h4{
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 1rem, 3vw);
   font-weight: 600;
 }
 
 #apresentation h1{
   text-align: left;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 2.5rem, 5vw);
   font-weight: 700;
 }
 
 #apresentation h5{
+  font-size: clamp(0.7rem 0.8rem, 2vw);
   font-weight: 400;
 }
 
@@ -294,39 +294,23 @@ label[for="day"] img{
     display: flex;
 }
 
-#spacing{
-  display: none;
-}
-
 /* Media queries */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 850px){
 
   #contact-container{
     flex-direction: column;
-    min-height: 100vh;
   }
   
   .content-container{
     margin: 5vh 0;
     width: 100%;
+    max-width: 1000px;
+    
   }
 
   #apresentation{
     gap: 50px;
-  }
-
-  #apresentation h1{
-    font-size: 2rem;
-  }
-
-  #apresentation h1 br:nth-child(1){
-    display: none;
-  }
-
-  #spacing{
-    display: block;
-    color: transparent;
   }
 
 }
